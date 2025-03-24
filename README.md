@@ -16,7 +16,7 @@ PopX is a pixel-perfect, mobile-first React application that provides a seamless
 
 ## Live Demo
 
-Visit the live demo at: [http://localhost:3001](http://localhost:3001)
+Visit the live demo at: (https://popx-three.vercel.app/)
 
 ## Screenshots
 
@@ -51,7 +51,7 @@ Visit the live demo at: [http://localhost:3001](http://localhost:3001)
    npm start
    ```
 
-4. Open [http://localhost:3001](http://localhost:3001) to view it in your browser.
+4. Open (https://popx-three.vercel.app/)] to view it in your browser.
 
 ## Project Structure
 
