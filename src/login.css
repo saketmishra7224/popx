@@ -40,8 +40,23 @@
   gap: 24px;
 }
 
-.welcome-message {
+.login-title {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
   margin-bottom: 10px;
+}
+
+.login-subtitle {
+  font-size: 14px;
+  color: #888;
+  line-height: 1.5;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.welcome-message {
+  margin-bottom: 16px;
 }
 
 .welcome-message h2 {
@@ -83,4 +98,21 @@
 .create-account-link span {
   color: #6200ea;
   font-weight: 600;
+}
+
+.login-button {
+  padding: 15px;
+  width: 100%;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: #a0a0a0;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.login-button:hover:not(.btn-disabled) {
+  background-color: #4285f4;
 }

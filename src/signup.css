@@ -35,49 +35,71 @@
 }
 
 .signup-title {
-  font-size: 22px;
-  font-weight: bold;
-  margin-bottom: 20px;
+  font-size: 26px;
+  font-weight: 700;
+  margin-bottom: 24px;
+  color: #333;
 }
 
 .signup-form {
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 26px;
 }
 
-.input-field {
-  display: flex;
-  flex-direction: column;
+.form-control {
+  position: relative;
 }
 
-.input-label {
-  font-size: 14px;
-  font-weight: 600;
-  color: #7b3ff6;
-  margin-bottom: 5px;
+.form-control label {
+  position: absolute;
+  top: -10px;
+  left: 12px;
+  background: white;
+  padding: 0 8px;
+  font-size: 13px;
+  font-weight: 500;
+  color: #666;
+  z-index: 1;
 }
 
-.input-box {
-  padding: 12px;
-  border: 1px solid #ccc;
-  border-radius: 6px;
-  font-size: 14px;
+.required-asterisk {
+  color: #ff0000;
+  margin-left: 2px;
+  font-weight: bold;
+}
+
+.form-control input {
+  width: 100%;
+  padding: 18px 16px 10px;
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #6200ea;
 }
 
 .radio-group {
-  margin-top: 10px;
+  margin-top: 16px;
 }
 
 .radio-group > label {
+  position: static;
   display: block;
   margin-bottom: 16px;
+  background: transparent;
+  padding: 0;
   font-weight: 500;
 }
 
 .radio-options {
   display: flex;
-  gap: 24px;
+  gap: 40px;
+  margin-top: 12px;
 }
 
 .radio-label {
@@ -146,5 +168,8 @@
 }
 
 .signup-button {
-  margin-top: 10px;
+  margin-top: 16px;
+  padding: 16px;
+  font-size: 16px;
+  font-weight: 600;
 }

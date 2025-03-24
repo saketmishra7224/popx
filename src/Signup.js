@@ -50,55 +50,56 @@ const Signup = () => {
       </div>
       
       <div className="signup-container">
+        <h2 className="signup-title">Create your PopX account</h2>
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="form-control">
-            <label htmlFor="fullName">Full Name*</label>
+            <label htmlFor="fullName">Full Name<span className="required-asterisk">*</span></label>
             <input 
               type="text" 
               id="fullName"
               name="fullName"
               value={formData.fullName}
               onChange={handleChange}
-              placeholder="John Doe" 
+              placeholder="Marry Doe" 
               required 
             />
           </div>
 
           <div className="form-control">
-            <label htmlFor="phoneNumber">Phone number*</label>
+            <label htmlFor="phoneNumber">Phone number<span className="required-asterisk">*</span></label>
             <input 
               type="tel" 
               id="phoneNumber"
               name="phoneNumber"
               value={formData.phoneNumber}
               onChange={handleChange}
-              placeholder="+1 9876543210" 
+              placeholder="Marry Doe" 
               required 
             />
           </div>
 
           <div className="form-control">
-            <label htmlFor="email">Email address*</label>
+            <label htmlFor="email">Email address<span className="required-asterisk">*</span></label>
             <input 
               type="email" 
               id="email"
               name="email"
               value={formData.email}
               onChange={handleChange}
-              placeholder="johndoe@example.com" 
+              placeholder="Marry Doe" 
               required 
             />
           </div>
 
           <div className="form-control">
-            <label htmlFor="password">Password*</label>
+            <label htmlFor="password">Password<span className="required-asterisk">*</span></label>
             <input 
               type="password" 
               id="password"
               name="password"
               value={formData.password}
               onChange={handleChange}
-              placeholder="••••••••" 
+              placeholder="Marry Doe" 
               required 
             />
           </div>
@@ -111,12 +112,12 @@ const Signup = () => {
               name="companyName"
               value={formData.companyName}
               onChange={handleChange}
-              placeholder="Acme Inc." 
+              placeholder="Marry Doe" 
             />
           </div>
 
           <div className="form-control radio-group">
-            <label>Are you an Agency?*</label>
+            <label>Are you an Agency?<span className="required-asterisk">*</span></label>
             <div className="radio-options">
               <label className="radio-label">
                 <input 

@@ -53,8 +53,8 @@ const Login = () => {
       <div className="login-container">
         <form className="login-form" onSubmit={handleSubmit}>
           <div className="welcome-message">
-            <h2>Welcome back</h2>
-            <p>Sign in to access your PopX account</p>
+            <h2 className="login-title">Signin to your PopX account</h2>
+            <p className="login-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
           </div>
           
           <div className="form-control">
@@ -86,7 +86,7 @@ const Login = () => {
           <div className="form-action">
             <button 
               type="submit" 
-              className={`btn-primary login-button ${!isValid ? 'btn-disabled' : ''}`}
+              className={`login-button ${!isValid ? 'btn-disabled' : ''}`}
               disabled={!isValid}
             >
               Login
