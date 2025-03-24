@@ -1,13 +1,29 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import "./account-setting.css";
 
 const Account = () => {
-  // Mock user data with lorem ipsum
-  const user = {
+  // Default user data
+  const defaultUser = {
     name: "Lorem Ipsum",
     email: "lorem.ipsum@example.com"
   };
+  
+  // State to store user data
+  const [user, setUser] = useState(defaultUser);
+  
+  // Load user data from localStorage on component mount
+  useEffect(() => {
+    try {
+      const storedUserData = localStorage.getItem('popxUserData');
+      if (storedUserData) {
+        const userData = JSON.parse(storedUserData);
+        setUser(userData);
+      }
+    } catch (error) {
+      console.error("Error loading user data from localStorage:", error);
+    }
+  }, []);
 
   // Generate lorem ipsum text of about 40 words
   const loremIpsum = "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl. Nullam auctor, nisl eget ultricies tincidunt, nisl nisl aliquam nisl, eget ultricies nisl nisl eget nisl.";
@@ -29,7 +45,7 @@ const Account = () => {
         <div className="profile-section">
           <div className="profile-image-container">
             <div className="profile-image">
-              <span>{user.name.split(' ').map(n => n[0]).join('')}</span>
+              <span>{user.name ? user.name.split(' ').map(n => n[0]).join('') : 'U'}</span>
             </div>
             <button className="edit-profile">
               <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">

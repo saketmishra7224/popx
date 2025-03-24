@@ -26,6 +26,14 @@ const Login = () => {
     e.preventDefault();
     if (isValid) {
       console.log("Login attempted with:", formData);
+      
+      // Store basic user data in localStorage
+      // In a real app, we would fetch the user's data from a server
+      localStorage.setItem('popxUserData', JSON.stringify({
+        name: "User", // Default name since we don't collect it during login
+        email: formData.email
+      }));
+      
       // Navigate to account page after successful login
       window.location.href = "/account";
     }

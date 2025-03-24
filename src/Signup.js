@@ -24,6 +24,16 @@ const Signup = () => {
     e.preventDefault();
     // Form submission logic would go here
     console.log("Form submitted:", formData);
+    
+    // Store user data in localStorage
+    localStorage.setItem('popxUserData', JSON.stringify({
+      name: formData.fullName,
+      email: formData.email,
+      phone: formData.phoneNumber,
+      company: formData.companyName,
+      isAgency: formData.isAgency
+    }));
+    
     // Navigate to account page after successful signup
     window.location.href = "/account";
   };
