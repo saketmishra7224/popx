@@ -1,0 +1,150 @@
+.signup-page {
+  background-color: white;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button {
+  margin-right: 12px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.signup-container {
+  padding: 20px;
+}
+
+.signup-title {
+  font-size: 22px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.signup-form {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.input-field {
+  display: flex;
+  flex-direction: column;
+}
+
+.input-label {
+  font-size: 14px;
+  font-weight: 600;
+  color: #7b3ff6;
+  margin-bottom: 5px;
+}
+
+.input-box {
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  font-size: 14px;
+}
+
+.radio-group {
+  margin-top: 10px;
+}
+
+.radio-group > label {
+  display: block;
+  margin-bottom: 16px;
+  font-weight: 500;
+}
+
+.radio-options {
+  display: flex;
+  gap: 24px;
+}
+
+.radio-label {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.radio-label span:last-child {
+  margin-top: 8px;
+  font-size: 14px;
+}
+
+.radio-label input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+.radio-custom {
+  position: relative;
+  height: 24px;
+  width: 24px;
+  background-color: #fff;
+  border: 2px solid #ddd;
+  border-radius: 50%;
+  transition: all 0.2s ease;
+}
+
+.radio-label input:checked ~ .radio-custom {
+  background-color: #fff;
+  border-color: #6200ea;
+}
+
+.radio-label input:checked ~ .radio-custom:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  background: #6200ea;
+}
+
+.create-button {
+  padding: 15px;
+  margin-top: 20px;
+  background-color: #7b3ff6;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.create-button:hover {
+  background-color: #6a34e0;
+}
+
+.signup-button {
+  margin-top: 10px;
+}

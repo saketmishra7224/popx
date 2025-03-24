@@ -1,0 +1,180 @@
+.account-page {
+  background-color: #f8f9fa;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 16px;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.logout-button {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #666;
+}
+
+.account-container {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.profile-section {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.profile-image-container {
+  position: relative;
+}
+
+.profile-image {
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
+  background-color: #6200ea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  font-size: 24px;
+  font-weight: 600;
+}
+
+.edit-profile {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 28px;
+  height: 28px;
+  background-color: white;
+  border: 1px solid #eee;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #6200ea;
+  cursor: pointer;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+}
+
+.profile-info h2 {
+  font-size: 18px;
+  font-weight: 600;
+  margin-bottom: 6px;
+  color: #333;
+}
+
+.profile-info p {
+  font-size: 14px;
+  color: #666;
+}
+
+.account-details {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.detail-card {
+  background-color: white;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.detail-card h3 {
+  font-size: 16px;
+  font-weight: 600;
+  margin-bottom: 16px;
+  color: #333;
+}
+
+.detail-item {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #f0f0f0;
+}
+
+.detail-item:last-child {
+  border-bottom: none;
+}
+
+.detail-label {
+  font-size: 14px;
+  color: #666;
+}
+
+.detail-value {
+  font-size: 14px;
+  font-weight: 500;
+  color: #333;
+}
+
+.app-navigation {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  max-width: 420px;
+  background-color: white;
+  display: flex;
+  justify-content: space-around;
+  padding: 12px 0;
+  border-top: 1px solid #eee;
+  z-index: 1000;
+}
+
+.nav-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #999;
+  text-decoration: none;
+  font-size: 12px;
+  gap: 4px;
+}
+
+.nav-item.active {
+  color: #6200ea;
+}
+
+.nav-item svg {
+  width: 20px;
+  height: 20px;
+}
+
+.lorem-ipsum {
+  padding: 10px 0;
+}
+
+.lorem-ipsum p {
+  font-size: 14px;
+  line-height: 1.6;
+  color: #666;
+  font-style: italic;
+}

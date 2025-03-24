@@ -1,0 +1,86 @@
+.login-page {
+  background-color: white;
+  position: relative;
+  height: 100%;
+  width: 100%;
+  overflow-y: auto;
+}
+
+.header {
+  display: flex;
+  align-items: center;
+  padding: 16px;
+  border-bottom: 1px solid #eee;
+  background-color: white;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+.back-button {
+  margin-right: 12px;
+  color: #333;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.header h1 {
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.login-container {
+  padding: 20px;
+}
+
+.login-form {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+}
+
+.welcome-message {
+  margin-bottom: 10px;
+}
+
+.welcome-message h2 {
+  font-size: 24px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 8px;
+}
+
+.welcome-message p {
+  font-size: 14px;
+  color: #666;
+}
+
+.form-action {
+  margin-top: 16px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.btn-disabled {
+  background-color: #e0e0e0;
+  color: #a0a0a0;
+  cursor: not-allowed;
+}
+
+.btn-disabled:hover {
+  background-color: #e0e0e0;
+}
+
+.create-account-link {
+  text-align: center;
+  font-size: 14px;
+  color: #666;
+  text-decoration: none;
+}
+
+.create-account-link span {
+  color: #6200ea;
+  font-weight: 600;
+}
