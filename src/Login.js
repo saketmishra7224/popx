@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import { Link } from "react-router-dom";
 import "./login.css";
 
 const Login = () => {
@@ -30,7 +29,7 @@ const Login = () => {
       // Store basic user data in localStorage
       // In a real app, we would fetch the user's data from a server
       localStorage.setItem('popxUserData', JSON.stringify({
-        name: "User", // Default name since we don't collect it during login
+        name: "Marry Doe", // Default name to match account page
         email: formData.email
       }));
       
@@ -41,62 +40,49 @@ const Login = () => {
 
   return (
     <div className="page login-page">
-      <div className="header">
-        <Link to="/" className="back-button">
-          <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-            <path d="M19 12H5M12 19l-7-7 7-7"/>
-          </svg>
-        </Link>
-        <h1>Sign in to PopX</h1>
-      </div>
-      
       <div className="login-container">
-        <form className="login-form" onSubmit={handleSubmit}>
-          <div className="welcome-message">
-            <h2 className="login-title">Signin to your PopX account</h2>
-            <p className="login-subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <div className="login-content">
+          <div className="login-header">
+            <h1>Signin to your<br/>PopX account</h1>
+            <p>Lorem ipsum dolor sit amet,<br/>consectetur adipiscing elit.</p>
           </div>
           
-          <div className="form-control">
-            <label htmlFor="email">Email address</label>
-            <input 
-              type="email" 
-              id="email"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              placeholder="johndoe@example.com" 
-              required 
-            />
-          </div>
-          
-          <div className="form-control">
-            <label htmlFor="password">Password</label>
-            <input 
-              type="password" 
-              id="password"
-              name="password"
-              value={formData.password}
-              onChange={handleChange}
-              placeholder="••••••••" 
-              required 
-            />
-          </div>
-          
-          <div className="form-action">
+          <form className="login-form" onSubmit={handleSubmit}>
+            <div className="form-control">
+              <label htmlFor="email">Email Address</label>
+              <input 
+                type="email" 
+                id="email"
+                name="email"
+                value={formData.email}
+                onChange={handleChange}
+                placeholder="Enter email address" 
+                required 
+              />
+            </div>
+            
+            <div className="form-control">
+              <label htmlFor="password">Password</label>
+              <input 
+                type="password" 
+                id="password"
+                name="password"
+                value={formData.password}
+                onChange={handleChange}
+                placeholder="Enter password" 
+                required 
+              />
+            </div>
+            
             <button 
               type="submit" 
-              className={`login-button ${!isValid ? 'btn-disabled' : ''}`}
+              className={`login-button ${!isValid ? 'disabled' : ''}`}
               disabled={!isValid}
             >
               Login
             </button>
-            
-            <Link to="/signup" className="create-account-link">
-              Don't have an account? <span>Create Account</span>
-            </Link>
-          </div>
-        </form>
+          </form>
+        </div>
       </div>
     </div>
   );

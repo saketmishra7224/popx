@@ -1,5 +1,5 @@
 .login-page {
-  background-color: white;
+  background-color: #f7f8f9;
   position: relative;
   height: 100%;
   width: 100%;
@@ -31,28 +31,91 @@
 }
 
 .login-container {
-  padding: 20px;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.login-content {
+  max-width: 440px;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.login-header {
+  margin-bottom: 40px;
+}
+
+.login-header h1 {
+  font-size: 28px;
+  font-weight: 700;
+  color: #333;
+  margin-bottom: 12px;
+  line-height: 1.2;
+}
+
+.login-header p {
+  font-size: 16px;
+  color: #666;
+  line-height: 1.4;
 }
 
 .login-form {
   display: flex;
   flex-direction: column;
-  gap: 24px;
+  gap: 20px;
 }
 
-.login-title {
-  font-size: 28px;
-  font-weight: 700;
-  color: #333;
-  margin-bottom: 10px;
+.form-control {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
 }
 
-.login-subtitle {
+.form-control label {
   font-size: 14px;
-  color: #888;
-  line-height: 1.5;
-  font-weight: 400;
-  margin-bottom: 20px;
+  font-weight: 500;
+  color: #6c25ff;
+}
+
+.form-control input {
+  padding: 14px 16px;
+  border: 1px solid #ddd;
+  border-radius: 6px;
+  font-size: 16px;
+  background-color: white;
+}
+
+.form-control input::placeholder {
+  color: #bbb;
+}
+
+.form-control input:focus {
+  outline: none;
+  border-color: #6c25ff;
+}
+
+.login-button {
+  margin-top: 10px;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  font-weight: 500;
+  background-color: #ccc;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s;
+}
+
+.login-button:not(.disabled) {
+  background-color: #6c25ff;
+}
+
+.login-button.disabled {
+  background-color: #ccc;
+  cursor: not-allowed;
 }
 
 .welcome-message {
@@ -98,21 +161,4 @@
 .create-account-link span {
   color: #6200ea;
   font-weight: 600;
-}
-
-.login-button {
-  padding: 15px;
-  width: 100%;
-  border: none;
-  border-radius: 8px;
-  font-size: 16px;
-  font-weight: 600;
-  background-color: #a0a0a0;
-  color: white;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
-}
-
-.login-button:hover:not(.btn-disabled) {
-  background-color: #4285f4;
 }

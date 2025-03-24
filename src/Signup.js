@@ -4,7 +4,6 @@ import "./signup.css";
 
 const Signup = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
     phoneNumber: "",
     email: "",
     password: "",
@@ -27,7 +26,7 @@ const Signup = () => {
     
     // Store user data in localStorage
     localStorage.setItem('popxUserData', JSON.stringify({
-      name: formData.fullName,
+      name: "Marry Doe",
       email: formData.email,
       phone: formData.phoneNumber,
       company: formData.companyName,
@@ -50,23 +49,13 @@ const Signup = () => {
       </div>
       
       <div className="signup-container">
-        <h2 className="signup-title">Create your PopX account</h2>
+        <h2 className="signup-title">
+          Create your<br />
+          PopX Account
+        </h2>
         <form className="signup-form" onSubmit={handleSubmit}>
           <div className="form-control">
-            <label htmlFor="fullName">Full Name<span className="required-asterisk">*</span></label>
-            <input 
-              type="text" 
-              id="fullName"
-              name="fullName"
-              value={formData.fullName}
-              onChange={handleChange}
-              placeholder="Marry Doe" 
-              required 
-            />
-          </div>
-
-          <div className="form-control">
-            <label htmlFor="phoneNumber">Phone number<span className="required-asterisk">*</span></label>
+            <label htmlFor="phoneNumber">Phone number<span className="required">*</span></label>
             <input 
               type="tel" 
               id="phoneNumber"
@@ -79,7 +68,7 @@ const Signup = () => {
           </div>
 
           <div className="form-control">
-            <label htmlFor="email">Email address<span className="required-asterisk">*</span></label>
+            <label htmlFor="email">Email address<span className="required">*</span></label>
             <input 
               type="email" 
               id="email"
@@ -92,7 +81,7 @@ const Signup = () => {
           </div>
 
           <div className="form-control">
-            <label htmlFor="password">Password<span className="required-asterisk">*</span></label>
+            <label htmlFor="password">Password<span className="required">*</span></label>
             <input 
               type="password" 
               id="password"
@@ -116,10 +105,10 @@ const Signup = () => {
             />
           </div>
 
-          <div className="form-control radio-group">
-            <label>Are you an Agency?<span className="required-asterisk">*</span></label>
-            <div className="radio-options">
-              <label className="radio-label">
+          <div className="agency-question">
+            <p>Are you an Agency?<span className="required">*</span></p>
+            <div className="radio-group">
+              <label className="radio-container">
                 <input 
                   type="radio" 
                   name="isAgency" 
@@ -128,9 +117,9 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <span className="radio-custom"></span>
-                <span>Yes</span>
+                <span className="radio-label">Yes</span>
               </label>
-              <label className="radio-label">
+              <label className="radio-container">
                 <input 
                   type="radio" 
                   name="isAgency" 
@@ -139,12 +128,12 @@ const Signup = () => {
                   onChange={handleChange}
                 />
                 <span className="radio-custom"></span>
-                <span>No</span>
+                <span className="radio-label">No</span>
               </label>
             </div>
           </div>
 
-          <button type="submit" className="btn-primary signup-button">Create Account</button>
+          <button type="submit" className="create-account-button">Create Account</button>
         </form>
       </div>
     </div>
